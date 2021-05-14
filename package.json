@@ -1,0 +1,31 @@
+{
+  "name": "meris--masterpiece-",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon serve.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/merimadanyan/meris--masterpiece-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/merimadanyan/meris--masterpiece-/issues"
+  },
+  "homepage": "https://github.com/merimadanyan/meris--masterpiece-#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^9.0.2",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "google-auth-library": "^7.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE form</title>
+    <script
+			src="https://code.jquery.com/jquery-3.5.1.min.js"
+			integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+			crossorigin="anonymous"></script>
+  </head>
+  <style type="text/css">
+      body{
+    background-color: rgb(238, 185, 233);
+}
+#cs{
+    background-color: white; 
+    border-radius: 20px 20px; 
+    border-top: 10px solid purple;
+}
+.required{
+    color:red;
+}
+h1{
+    margin: 20px;
+}
+p{
+    color: red; 
+    padding-bottom: 25px; 
+    margin: 20px;
+}
+.inputs{
+    background-color: white;
+     border-radius: 20px 20px; 
+     margin-bottom: 20px;
+}
+.labels{
+    font-size: 20px; 
+    margin-left: 37px;  
+    margin-top:37px;
+    display:inline-block;
+}
+.cover label{
+    margin-bottom: 20px;
+
+}
+.language label{
+    margin-bottom: 20px;
+
+
+}
+.originalLanguage label{
+    margin-bottom: 20px;
+
+    
+}
+input[type=submit] {
+    background-color: rgb(238, 94, 238);
+    border: none;
+    border-radius: 10px 10px;
+    padding: 15px;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+ }
+
+input[type=submit]:hover {
+    background-color: rgb(240, 122, 240);
+    outline: none;
+}
+
+input[type=submit]:focus {
+    background-color: rgb(226, 128, 226);
+    outline: none;
+}
+.input{
+    border:none;
+    margin: 37px;
+    border-bottom:1px solid rgb(211, 208, 208);
+    font-size: 17px;
+}
+#language{
+    border:none;
+    border-bottom:1px solid rgb(211, 208, 208);
+    margin-bottom: 20px;
+}
+#like{
+    border:none;
+    border-bottom:1px solid rgb(211, 208, 208);
+    margin-bottom: 20px;
+}
+input[type=date]{
+    border:none;
+    margin: 37px;
+    font-size: 16px;
+    
+}
+input[type=radio]{
+    margin-left: 37px;
+    margin-bottom: 20px; 
+}
+.cover label{
+    font-size: 18px;
+}
+.language label{
+    font-size:18px;
+}
+.originalLanguage label{
+    font-size: 18px;
+}
+  </style>
+<body>
+    <div style="margin: 20px;">
+        <div id="cs">
+            <h1>
+                CS 120 Favorite
+            </h1>
+            <h1>
+                Books
+            </h1>
+            <p>
+                * Required
+            </p>
+        </div>
+        <div class="inputs">
+
+            <label for="fullname" class="labels">Full Name <span class="required">*</span></label>
+
+
+            <br>
+            <input class="input"  type="text" name="fullname" placeholder="Your answer">
+
+        </div>
+
+        <div class="inputs">
+            <label for="title" class="labels">Title <span class="required">*</span></label>
+            <br>
+            <input class="input" type="text" name="title" placeholder="Your answer" >
+
+        </div>
+
+        <div class="inputs">
+            <label for="author" class="labels">Author <span class="required">*</span></label>
+            <br>
+            <input class="input" type="text" name="author" placeholder="Your answer" >
+
+        </div>
+        <div class="inputs">
+            <label for="colour" class="labels">Colour</label>
+            <br>
+            <input class="input" type="text" name="colour" placeholder="Your answer">
+
+        </div>
+        <div class="cover" style="  background-color: white; 
+                                    border-radius: 20px 20px;
+                                    margin-bottom: 20px;">
+            <label for="coverType" class="labels">Cover Type <span class="required">*</span></label>
+            <br>
+            <input class="cover1" type="radio" name="coverType" value="paperback">
+            <label id="cover1" for="vehicle2" >PaperBack</label><br>
+            <input class="cover2" type="radio" name="coverType" value="hardcover">
+            <label id="cover2" for="vehicle2">Hardcover</label><br>
+            <input class="other" type="radio" name="coverType" >
+            <label for="vehicle3">Other:</label>
+            <span class="sp"></span>
+        </div>
+        <div  class="inputs">
+            <label for="number" class="labels">Number of pages <span class="required">*</span></label>
+            <br>
+            <input class="input" type="text" name="number" placeholder="Your answer">
+
+        </div>
+        <div class="inputs">
+            <label for="price" class="labels">Price <span class="required">*</span></label>
+            <br>
+            <input class="input" type="text" name="price" placeholder="Your answer">
+
+        </div>
+        <div class="inputs">
+            <label for="currency" class="labels">Currency <span class="required">*</span></label>
+            <br>
+            <input class="input" type="text" name="currency" placeholder="Your answer">
+
+        </div>
+        <div class="language " style="  background-color: white; 
+                                        border-radius: 20px 20px;
+                                        margin-bottom: 20px;">
+            <label for="fullname"class="labels" >Language<span class="required">*</span></label>
+            <br>
+            <input class="language1" type="radio" name="language" value="english">
+            <label id="language1" for="vehicle1" > English</label><br>
+            <input class="language2" type="radio" name="language" value="armenian" >
+            <label id="language2" for="vehicle2" >Armenian</label><br>
+            <input class="language3" type="radio" name="language" value="russian" >
+            <label id="language3" for="vehicle3">Russian</label><br>
+            <input class="language4" type="radio" name="language" value="french">
+            <label id="language4" for="vehicle4">French</label><br>
+            <input class="other" type="radio" name="language" >
+            <label for="vehicle4">Other:</label>
+            <span class="sp"></span>
+        </div>
+        <div class="originalLanguage " style="  background-color: white; 
+                                                border-radius: 20px 20px;
+                                                margin-bottom: 20px;"   >
+            <label for="fullname" class="labels">Original language</label>
+            <br>
+            <input class="originalLanguage1" type="radio" name="originalLanguage" value="english">
+            <label id="originalLanguage1" for="vehicle1" > English</label><br>
+            <input class="originalLanguage2" type="radio" name="originalLanguage" value="russian">
+            <label id="originalLanguage2" for="vehicle2">Russian</label><br>
+            <input class="originalLanguage3" type="radio" name="originalLanguage" value="french">
+            <label id="originalLanguage3" for="vehicle3">French</label><br>
+            <input class="originalLanguage4" type="radio" name="originalLanguage" value="armenian">
+            <label id="originalLanguage4" for="vehicle4" >Armenian</label><br>
+            <input class="other" type="radio" name="originalLanguage">
+            <label for="vehicle4">Other:</label>
+            <span class="sp"></span>
+        </div>
+        <div class="inputs" >
+            <label for="edition" class="labels"> Edition</label>
+            <br>
+            <input class="input" type="text" name="edition" placeholder="Your answer" >
+
+        </div>
+        <div class="inputs" >
+            <label for="dimensions" class="labels"> Dimensions</label>
+            <br>
+            <input class="input" type="text" name="dimensions" placeholder="Your answer" >
+
+        </div>
+        <div class="inputs">
+            <label for="publisher" class="labels">Publisher <span class="required">*</span></label>
+            <br>
+            <input class="input" type="text" name="publisher" placeholder="Your answer" >
+
+        </div>
+        <div class="inputs">
+            <label for="fullname" class="labels"> Publishing Date <span class="required">*</span></label>
+            <br>
+            <input name="publisherDate" type="date">
+
+        </div>
+        <div class="inputs">
+            <label for="fullname" class="labels"> Original Publishing Date</label>
+            <br>
+            <input name="originalDate" type="date" >
+
+        </div>
+        <div class="inputs">
+            <label for="genre" class="labels">Genre <span class="required">*</span></label>
+            <br>
+            <input class="input" type="text" name="genre" placeholder="Your answer" >
+
+        </div>
+        <div class="inputs">
+            <label for="age" class="labels">Age Restriction</label>
+            <br>
+            <input class="input" type="text" name="age" placeholder="Your answer" >
+
+        </div>
+        <input id="sumbit" type="submit" value="Submit">
+    </div>
+
+<script type="text/javascript">
+    
+const coverType = document.querySelectorAll('input[name="coverType"]');
+
+const language = document.querySelectorAll('input[name="language"]');
+
+const originalLanguage =  document.querySelectorAll('input[name="originalLanguage"]');
+const input = document.querySelectorAll('.other');
+
+let labelCover,leblelanguage,lebleOriginalLanguage;
+
+document.getElementById('sumbit').addEventListener('click' , (event)=>{
+   sendForm();
+})
+
+input.forEach((input) => {
+    input.addEventListener('change', (event)=>{
+        showInput(event);
+    });
+});
+
+function showInput(event){
+    const key = event.target.checked;
+    let sp = event.target.parentElement.querySelector('.sp');
+    let value =  event.target.parentElement.className;
+    
+    if(key==true){
+          sp.innerHTML = '<input id='+ value +' type="text" name="other" style="border:none;border-bottom:1px solid rgb(211, 208, 208);margin-bottom: 20px;">';
+        document.querySelector(`#${value}`).addEventListener('change', (event)=>{
+            
+            if(value =='cover'){
+                labelCover = event.target.value;
+             
+            }
+            if(value == 'language '){
+                leblelanguage = event.target.value;
+                
+            }
+            if(value =='originalLanguage '){
+                lebleOriginalLanguage =event.target.value;
+                
+            }
+          });
+    }
+}
+
+coverType.forEach((cover) => {
+    cover.addEventListener('click', (event)=>{
+        const key = event.target.className;
+        let input = document.getElementById('cover');
+        if(key === "other"){
+            return;
+        }
+        else{
+            if(input){
+                input.remove();
+            }
+            labelCover = event.target.value;
+        }
+    });
+});
+language.forEach((language) => {
+    language.addEventListener('click', (event)=>{
+        const key = event.target.className;
+        let input = document.getElementById('language');
+        if(key === "other"){
+            return;
+        }
+        else{
+            if(input){
+                input.remove();
+            }
+            leblelanguage = event.target.value;
+        }
+    });
+});
+
+originalLanguage.forEach((language) => {
+    language.addEventListener('click', (event)=>{
+        const key = event.target.className;
+        let input = document.getElementById('originalLanguage');
+        if(key === "other"){
+            return;
+        }
+        else{
+            if(input){
+                input.remove();
+            }
+            lebleOriginalLanguage = event.target.value;
+        }
+    });
+});
+
+function sendForm() { 
+    const fullName = document.querySelector('input[name="fullname"]').value;
+    const title = document.querySelector('input[name="title"]').value;
+    const author = document.querySelector('input[name="author"]').value;
+    const colour = document.querySelector('input[name="colour"]').value;
+    const number = document.querySelector('input[name="number"]').value;
+    const price = document.querySelector('input[name="price"]').value;
+    const currency = document.querySelector('input[name="currency"]').value;
+    const edition = document.querySelector('input[name="edition"]').value;
+    const dimensions = document.querySelector('input[name="dimensions"]').value;
+    const publisher = document.querySelector('input[name="publisher"]').value;
+    const genre = document.querySelector('input[name="genre"]').value;
+    const age = document.querySelector('input[name="age"]').value;
+    const publisherDate = document.querySelector('input[type="date"][ name = "publisherDate"]').value;
+    const originalDate = document.querySelector('input[type="date" ][name = "originalDate"]').value;
+    const coverType = labelCover;
+    const originalLanguage =  lebleOriginalLanguage;
+    const language = leblelanguage;
+
+    
+     if (fullName == "") {
+        return
+    }
+    if (title == "" ) {
+        return
+    }
+    if (author == "") {
+        return
+    }
+    if (number == "" ) {
+        return
+    }
+    if (price == "") {
+        return
+    }
+    if (currency == "" ) {
+        return
+    }
+    if (publisher == "") {
+        return
+    }
+    if (genre == "" ) {
+        return
+    }
+    if(publisherDate == ""){
+        return
+    }
+    if (!coverType) {
+        return
+    }
+    if (!language) {
+        return
+    }
+    const data = {
+        "owner":"MeriMadanyan",
+        "project":"Book",
+        fullName,
+        title,
+        author, 
+        colour, 
+        number, 
+        price, 
+        currency,
+        edition,
+        dimensions,
+        publisher, 
+        genre,
+        age,
+        publisherDate,
+        originalDate,
+        coverType,
+        originalLanguage,
+        language,
+    }
+    console.log(data);
+
+
+     $.ajax({
+    type: 'POST',
+    url: "https://cse-120-2021-api-meri.herokuapp.com/data",
+    data: data,
+    cache: false,
+    dataType : 'json',
+    success: function (data) {
+      console.log("success");
+      document.location = "add";
+    },
+    error: function (xhr) {
+      console.error("Error in post", xhr);
+    },
+    complete: function () {
+      console.log("Complete");  
+    }
+  });
+}
+
+function loadExistingData() {
+    var existingData = [];
+  $.ajax({
+    type : "GET",
+    url : "https://cse120-2021-api.herokuapp.com/data",
+    dataType : "json",
+    success : function(data) {
+      console.log("success", data);
+      existingData = data;
+      displayData(existingData.data);
+    },
+    error : function(data) {
+        console.log("Error")
+    }
+  });
+}
+
+function displayData(existingData) {
+  document.getElementById("existingData").innerHTML = "<ul>";
+  for (var i = 0; i < existingData.length; i++) {
+    currentBook = existingData[i];
+    document.getElementById("existingData").innerHTML += "<li><i>" + currentBook.fullname + "</li> : <b>" + currentBook.title + "</b></li>";
+  }
+  document.getElementById("existingData").innerHTML += "</ul>"
+}
+
+    
+function deleteData(id) {
+
+    var r = confirm("Are you sure you want to delete the item with the following ID? " + id);
+    if (r == true) {
+      
+    } else {
+      return;
+    }
+
+    var tmp = {
+        "id": id
+    }
+
+    $.ajax({
+        type: 'POST',
+        url: "https://cse120-2021-api.herokuapp.com/data/delete",
+        data: tmp,
+        cache: false,
+        dataType : 'json',
+        success: function (data) {
+            console.log("success");
+            document.getElementById("div" + id).style.display = "none";
+        },
+        error: function (xhr) {
+            console.error("Error in post", xhr);
+        },
+        complete: function () {
+            console.log("Complete");  
+        }
+    });
+}
+
+function saveData() {
+    var tmp = {
+        "test": "Data"
+    }
+
+    $.ajax({
+        type: 'POST',
+        url: "https://cse120-2021-api.herokuapp.com/data",
+        data: tmp,
+        cache: false,
+        dataType : 'json',
+        success: function (data) {
+            console.log("success");
+        },
+        error: function (xhr) {
+            console.error("Error in post", xhr);
+        },
+        complete: function () {
+            console.log("Complete");  
+        }
+    });
+}
+
+function loadExistingData() {
+    $.ajax({
+        type : "GET",
+        url : "https://cse120-2021-api.herokuapp.com/data",
+        dataType : "json",
+        success : function(data) {
+            console.log("success", data);
+            displayData(data.data);
+        },
+        error : function(data) {
+            console.log("Error")
+        }
+    });
+}
+
+function displayData(data) {
+    document.getElementById("dataContainer").innerHTML = "";
+    data.forEach(elem => {
+        var item = document.createElement("div");
+        item.id = "div" + elem["_id"];
+        item.className = "item";
+        if (Object.keys(elem).length == 1) {
+            var span = document.createElement("span");
+            span.innerHTML = "<i>Empty Element with autogenerated ID: </i>" + elem["_id"];
+            item.appendChild(span);
+        }
+        Object.keys(elem).forEach(key => {
+            if (key != "_id") {
+                var span = document.createElement("span");
+
+                var b = document.createElement("b");
+                b.innerHTML = key + ": ";
+                span.appendChild(b);
+                
+                span.className = "item";
+                if (elem[key]) {
+                    span.innerHTML += elem[key];
+                } else {
+                    var span1 = document.createElement("span");
+                    span1.className = "undefined";
+                    span1.innerHTML = "N/A";
+                    span.appendChild(span1)
+                }
+                item.appendChild(span);
+
+                var br = document.createElement("br");
+                item.appendChild(br);
+            }
+        })
+        var button = document.createElement("button");
+        button.innerHTML = "Delete";
+        button.id = elem["_id"];
+        button.addEventListener("click", function(e){
+            deleteData(e.target.id);
+        }, false);
+        item.appendChild(button);
+        document.getElementById("dataContainer").appendChild(item);
+    })
+
+}
+
+var loadedData = [];
+
+function loadEditItem() {
+    localStorage = window.localStorage;
+    editItem = JSON.parse(localStorage.getItem("editItem"));
+    console.log(editItem);
+    document.getElementById("_id").innerHTML = editItem["_id"];
+    document.getElementById("title").value = editItem["title"];
+    document.getElementById("fullname").value = editItem["fullName"];   
+    document.getElementById("author").value = editItem["author"];   
+    document.getElementById("pages").value = editItem["noOfPgs"];
+}
+
+function editData(id) {
+    var tmp = id.split("edit_");
+    var item_id = tmp[1];
+
+    loadedData.forEach(item => {
+        if (item._id == item_id) {
+            console.log(item); 
+            localStorage = window.localStorage;
+            localStorage.setItem('editItem', JSON.stringify(item));
+            document.location  = "form.html"; 
+        }
+    })
+}
+
+function deleteData(id) {
+
+    var r = confirm("Are you sure you want to delete the item with the following ID? " + id);
+    if (r == false) {
+        return;
+    }
+
+    var tmp = {
+        "id": id
+    }
+
+    $.ajax({
+        type: 'POST',
+        url: "https://cse120-2021-api.herokuapp.com/data/delete",
+        data: tmp,
+        cache: false,
+        dataType : 'json',
+        success: function (data) {
+            console.log("success");
+            document.getElementById("div" + id).style.display = "none";
+        },
+        error: function (xhr) {
+            console.error("Error in post", xhr);
+        },
+        complete: function () {
+            console.log("Complete");  
+        }
+    });
+}
+
+function saveData() {
+    var tmp = {
+        "test": "Data"
+    }
+
+    $.ajax({
+        type: 'POST',
+        url: "https://cse120-2021-api.herokuapp.com/data",
+        data: tmp,
+        cache: false,
+        dataType : 'json',
+        success: function (data) {
+            console.log("success");
+        },
+        error: function (xhr) {
+            console.error("Error in post", xhr);
+        },
+        complete: function () {
+            console.log("Complete");  
+        }
+    });
+}
+
+function loadExistingData() {
+  myDancingData = [];
+  myBookData = [];
+  otherData = [];
+  $.ajax({
+      type : "GET",
+      url : "https://cse120-2021-api.herokuapp.com/data",
+      dataType : "json",
+      success : function(data) {
+        console.log("success", data);
+        data.data.forEach(elem => {
+          if (elem["owner"] == "Meri Madanyan") {
+            if (elem["project"] == "Dancing") {
+              myDancingData.push(elem);
+            } else {
+              myBookData.push(elem);
+            }
+          } else {
+            otherData.push(elem);
+          }
+        })
+        displayData(myDancingData, "dancingDataContainer");
+        displayData(myBookData, "bookDataContainer");
+        displayData(otherData, "otherDataContainer");
+      },
+      error : function(data) {
+          console.log("Error")
+      }
+  });
+}
+
+function displayData(data, containerDivName) {
+    loadedData = data;
+    document.getElementById(containerDivName).innerHTML = "";
+    data.forEach(elem => {
+        var item = document.createElement("div");
+        item.id = "div" + elem["_id"];
+        item.className = "item";
+        if (Object.keys(elem).length == 1) {
+            var span = document.createElement("span");
+            span.innerHTML = "<i>Empty Element with autogenerated ID: </i>" + elem["_id"];
+            item.appendChild(span);
+        }
+        Object.keys(elem).forEach(key => {
+            if (key != "_id") {
+                var span = document.createElement("span");
+
+                var b = document.createElement("b");
+                b.innerHTML = key + ": ";
+                span.appendChild(b);
+                
+                span.className = "item";
+                if (elem[key]) {
+                    span.innerHTML += elem[key];
+                } else {
+                    var span1 = document.createElement("span");
+                    span1.className = "undefined";
+                    span1.innerHTML = "N/A";
+                    span.appendChild(span1)
+                }
+                item.appendChild(span);
+
+                var br = document.createElement("br");
+                item.appendChild(br);
+            }
+        })
+        var edit_button = document.createElement("button");
+        edit_button.innerHTML = "Edit";
+        edit_button.id = "edit_" + elem["_id"];
+        edit_button.className = "edit";
+        edit_button.addEventListener("click", function(e){
+            editData(e.target.id);
+        }, false);
+        item.appendChild(edit_button);
+
+        var button = document.createElement("button");
+        button.innerHTML = "Delete";
+        button.id = elem["_id"];
+        button.addEventListener("click", function(e){
+            deleteData(e.target.id);
+        }, false);
+        item.appendChild(button);
+        document.getElementById(containerDivName).appendChild(item);
+    })
+
+}
+
+function toggleOtherData() {
+  var otherData = document.getElementById("otherDataContainer");
+  if (otherData.style.display == "block") {
+    otherData.style.display = "none";
+  } else {
+    otherData.style.display = "block";
+  }
+}
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE form</title>
+    
+    <script
+			src="https://code.jquery.com/jquery-3.5.1.min.js"
+			integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+			crossorigin="anonymous"></script>
+    <style type="text/css">
+        body{
+    background-color: rgb(221, 246, 252);
+}
+#cs{
+    background-color: white; 
+    border-radius: 20px 20px; 
+    border-top: 10px solid lightblue;
+}
+h1{
+    margin: 20px;
+}
+p{
+    color: red;
+    padding-bottom: 25px; 
+    margin: 20px;
+}
+.inputs{
+    
+    background-color: white; 
+    border-radius: 20px 20px;
+    margin-bottom: 20px;
+}
+.perception{
+    margin-bottom: 20px;
+}
+.labels{
+    font-size: 20px; 
+    margin-top:37px; 
+    margin-left: 37px;
+    display:inline-block;
+}
+ input[type=submit] {
+    background-color: rgb(173 216 230);
+    border: none;
+    border-radius: 10px 10px;
+    padding: 15px;
+    font-size: 15px;
+    color: black;
+    cursor: pointer;;
+}
+
+input[type=submit]:focus {
+    background-color: rgb(135 206 235);
+    outline: none;
+}
+input[type=date]{
+    border:none;
+    margin: 37px;
+    font-size: 16px;
+}
+.required{
+    color:red;
+}
+.input{
+    border:none;
+    margin: 37px;
+    border-bottom:1px solid rgb(211, 208, 208);
+    font-size: 17px;
+}
+input[type=radio]{
+    margin-left:37px;
+    margin-bottom: 20px;
+}
+input[type=checkbox]{
+    margin-left:37px;
+    margin-bottom: 20px;
+}
+
+    </style>
+  </head>
+<body>
+    <div style="margin: 20px; ">
+        <div id="cs">
+            <h1>
+                CS 120 Hobby
+            </h1>
+            <div style="display:flex;">
+            <h1>
+              Dancing 
+            </h1>
+           <img src="https://ae01.alicdn.com/kf/HTB1CI6dKFXXXXa6XFXXq6xXFXXXH/8-5-17-7CM-Ballet-Dancer-Personalized-Car-Stickers-Cartoon-Vinyl-Car-Decorative-Accessories-Black-Silver.jpg_q50.jpg" width="90" height="60">
+            </div>
+          
+            <p>
+                * Required
+            </p>
+            
+        </div>
+        <div class="inputs">
+
+            <label for="fullname"class="labels">Full Name 
+                </label> <span class="required">*</span>
+
+
+            <br>
+            <input  class="input" type="text" name="fullname" placeholder="Your answer">
+
+        </div>
+
+
+         <div class="inputs">
+            <label for="title" class="labels">Date of Birth
+            </label><span class="required">*</span>
+            <br>
+        <input name="originalDate" type="date">
+
+        </div>
+
+
+        <div class="gender inputs">
+            <label for="gen1" class="labels" style="margin-bottom: 20px;">Gender 
+            </label><span class="required">*</span>
+            <br>
+            <input class="gender1" type="radio" name="gender" value="Male">
+            <label id="gender1" for="g1" style="font-size: 18px;"> Male </label><br>
+            <input class="gender2" type="radio" name="gender" value="Female">
+            <label id="gender2" for="g2" style="font-size: 18px;">Female </label><br>
+
+           </div>
+
+
+        <div class="inputs">
+            <label for="author" class="labels">How many years have you been dancing? </label>
+            <span class="required">*</span>
+            <br>
+            <input class="input" type="text" name="author" placeholder="Your answer" >
+           
+
+        </div>
+      
+      
+      
+        <div class="language " style="  background-color: white; 
+                                        border-radius: 20px 20px;
+                                        margin-bottom: 20px;">
+            <label class="labels" for="fullname" style="margin-bottom: 20px;">What type of dances to you do?
+            </label><span class="required">*</span>
+            <br>
+            <input class="language1" type="radio" name="language" value="Ballet">
+            <label id="language1" for="vehicle1" style="font-size: 18px;"> Ballet</label><br>
+            <input class="language2" type="radio" name="language" value="Hip Hop" >
+            <label id="language2" for="vehicle2" style="font-size: 18px;">Hip Hop</label><br>
+            <input class="language3" type="radio" name="language" value="Contemporary" >
+            <label id="language3" for="vehicle3" style="font-size: 18px;">Contemporary</label><br>
+            <input class="language4" type="radio" name="language" value="Folk">
+            <label id="language4" for="vehicle4" style="font-size: 18px;">Folk</label><br>
+            <input class="other" type="radio" name="language" >
+            <label for="vehicle4" style="font-size: 18px;">Other:</label>
+            <span class="sp"></span>
+        </div>
+
+        <div class="like " style="  background-color: white; 
+                                    border-radius: 20px 20px;
+                                    margin-bottom: 20px;">
+            <label for="fullname1" class="labels" style="margin-bottom: 20px;">Which style of dancing is more appealing to you?
+            </label><span class="required">*</span>
+            <br>
+            <input class="like1" type="checkbox" name="like" value="Modern types of dancing">
+            <label id="like1" for="car1" style="font-size: 18px;"> Modern types of dancing </label><br>
+            <input class="like2" type="checkbox" name="like" value="Classic types of dancing" >
+            <label id="like2" for="car2" style="font-size: 18px;">Classic types of dancing </label><br>
+            <input class="like3" type="checkbox" name="like" value="I like both styles same way" >
+            <label id="like3" for="car3" style="font-size: 18px;"> I like both styles same way</label><br>
+            <input class="like4" type="checkbox" name="like" value="I like the movement of one style and the costumes of another">
+            <label id="like4" for="car4" style="font-size: 18px;">I like the movement of one style and the costumes of another</label><br>
+            <input class="other" type="checkbox" name="like" >
+            <label for="car4" style="font-size: 18px;">Other:</label>
+            <span class="sp"></span>
+        </div>
+
+
+        <div class="perception inputs">
+            <label for="fullname" class="labels" style="margin-bottom: 20px;">Which one from the following describes best your perception of dancing? 
+            </label><span class="required">*</span>
+            <br>
+            <input class="perception1" type="radio" name="perception" value="A hobby">
+            <label id="perception1" for="p1" > A hobby</label><br>
+            <input class="perception2" type="radio" name="perception" value="An art">
+            <label id="perception2" for="p2" style="font-size: 18px;">An art</label><br>
+            <input class="perception3" type="radio" name="perception" value="A profession" >
+            <label id="perception3" for="p3" style="font-size: 18px;">A profession</label><br>
+            <input class="perception4" type="radio" name="perception" value="A sport">
+            <label id="perception4" for="p4" style="font-size: 18px;">A sport</label><br>
+        </div>
+        
+        <div class="inputs">
+            <label for="edition" class="labels"> Who is your role model in dancing?</label>
+            <br>
+            <input class="input" type="text" name="edition" placeholder="Your answer" >
+
+        </div>
+        <div class="inputs">
+            <label for="dimensions" class="labels"> Have you tried partner dances?</label>
+            <br>
+            <input class="input" type="text" name="dimensions" placeholder="Your answer" >
+
+        </div>
+        <div class="inputs">
+            <label for="publisher" class="labels">Do you need a special sportswear for your dances? 
+            </label> <span class="required">*</span>
+            <br>
+            <input class="input" type="text" name="publisher" placeholder="Your answer" >
+
+        </div>
+      
+       
+        <div class="inputs">
+            <label for="genre" class="labels">Did you take part in any dance competition?
+             </label><span class="required">*</span>
+            <br>
+            <input type="text" name="genre" placeholder="Your answer" class="input">
+
+        </div>
+        <div class="inputs">
+            <label for="age" class="labels">If you answered yes to the previous question, please name couple of them? </label>
+            <br>
+            <input type="text" name="age" placeholder="Your answer" class="input">
+
+        </div>
+        <input id="submit" type="submit" value="Submit">
+    </div>
+
+<script>
+    const typeOfDancesYouDo = document.querySelectorAll('input[name="language"]');
+
+const yourGender = document.querySelectorAll('input[name="gender"]');
+
+const typeOfDancesYouLike = document.querySelectorAll('input[name="like"]');
+
+const perceptionOfDancing = document.querySelectorAll('input[name="perception"]');
+
+let data= {};
+
+const input = document.querySelectorAll('.other');
+
+let leblelanguage, leblegender, leblelike, lebleperception;
+
+if (document.getElementById('submit')!=null) {
+ document.getElementById('submit').addEventListener('click' , (event)=>{
+   sendForm();
+})
+}
+
+input.forEach((input) => {
+    input.addEventListener('change', (event)=>{
+        showInput(event);
+    });
+});
+
+
+function showInput(event){
+    const key = event.target.checked;
+    let sp = event.target.parentElement.querySelector('.sp');
+    let value =  event.target.parentElement.className;
+
+    if(key==true){
+        sp.innerHTML = '<input id='+ value +'type="text" name="other" style="border:none;border-bottom:1px solid rgb(211, 208, 208);margin-bottom: 20px;">';
+       
+        document.querySelector(`#${value}`).addEventListener('change', (event)=>{
+            if (value == 'language ') {
+                leblelanguage = event.target.value;
+                
+            }
+            if (value == 'like ') {
+                leblelike = event.target.value;
+            }
+          });
+    }
+}
+
+
+
+typeOfDancesYouDo.forEach((language) => {
+    language.addEventListener('click', (event)=>{
+        const key = event.target.className;
+        let input = document.querySelector(`#language`);
+        if(key === "other"){
+            return;
+        }
+        else{
+            if(input){
+              input.remove();
+            }
+            leblelanguage = event.target.value;
+        }
+    });
+});
+
+
+yourGender.forEach((gender) => {
+    gender.addEventListener('click', (event)=>{
+        leblegender = event.target.value;
+    });
+});
+
+
+perceptionOfDancing.forEach((perception) => {
+    perception.addEventListener('click', (event)=>{
+        lebleperception = event.target.value;
+    });
+});
+
+typeOfDancesYouLike.forEach((like) => {
+    like.addEventListener('click', (event)=>{
+        const key = event.target.className;
+        if(key === "other"){
+            return;
+        }
+        else{
+            leblelike = event.target.value;
+        }
+    });
+});
+
+function sendForm() { 
+    const fullName = document.querySelector('input[name="fullname"]').value;
+    const dateofBirth = document.querySelector('input[type="date" ][name = "originalDate"]').value;
+    const yourGender = leblegender;
+    const yearsofDancing = document.querySelector('input[name="author"]').value;
+    const typeOfDancesYouLike = leblelike;
+    const perceptionOfDancing = lebleperception;
+    const roleModel = document.querySelector('input[name="edition"]').value;
+    const experiencewithPartnerDances = document.querySelector('input[name="dimensions"]').value;
+    const needForSpecialSportsWear = document.querySelector('input[name="publisher"]').value;
+    const participationInCompetitions = document.querySelector('input[name="genre"]').value;
+    const namesOfCompetitions = document.querySelector('input[name="age"]').value;
+    const typeOfDancesYouDo = leblelanguage; 
+    
+    
+    if (fullName == "") {
+        return
+    }
+    if ( dateofBirth == "" ) {
+        return
+    }
+    if (!yourGender) {
+        return
+    }
+    if(!typeOfDancesYouDo){
+        return;
+    }
+    if (!perceptionOfDancing) {
+        return
+    }
+    if (!typeOfDancesYouLike) {
+        return
+    }
+
+    if (yearsofDancing == "") {
+        return
+    }
+    if (needForSpecialSportsWear == "" ) {
+        return
+    }
+    if (participationInCompetitions == "") {
+        return
+    }
+
+    data = {
+        "owner":"MeriMadanyan",
+        "project":"Dance",
+        fullName,
+        dateofBirth,
+        yourGender,
+        yearsofDancing,
+        typeOfDancesYouLike,
+        perceptionOfDancing, 
+        roleModel, 
+        experiencewithPartnerDances, 
+        needForSpecialSportsWear, 
+        participationInCompetitions,
+        namesOfCompetitions,
+        typeOfDancesYouDo,       
+    }
+    
+    console.log(data); 
+   
+ $.ajax({
+    type: 'POST',
+    url: "https://cse-120-2021-api-meri.herokuapp.com/data",
+    data: data,
+    cache: false,
+    dataType : 'json',
+    success: function (data) {
+      console.log("success");
+      document.location = "add";
+    },
+    error: function (xhr) {
+      console.error("Error in post", xhr);
+    },
+    complete: function () {
+      console.log("Complete");  
+    }
+  });
+} 
+
+</script>
+</body>
+</html>
