@@ -2,6 +2,7 @@ const cookieParser = require('cookie-parser');
 const express = require('express');
 const app =  express();
 
+app.use(express.static("public"));
 //Google Auth
 const {OAuth2Client} = require('google-auth-library');
 const CLIENT_ID = '227600496619-j1jj98rbgatqdbeqtl1ka3tkg38oplog.apps.googleusercontent.com';
