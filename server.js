@@ -51,25 +51,25 @@ app.get('/dashboard',checkAuthenticated,(req,res)=>{
 })
  
 
-app.get('/hobby',(req,res)=>{
+app.get('/hobby',checkAuthenticated,(req,res)=>{
   res.render('hobby.ejs');
 })
 
 
-app.get('/admin',(req,res)=>{
+app.get('/admin',checkAuthenticated,(req,res)=>{
   res.render('admin.ejs');
 })
-app.get('/editBook',(req,res)=>{
+app.get('/editBook',checkAuthenticated,(req,res)=>{
   res.render('editBook.ejs');
 })
-app.get('/book',(req,res)=>{
+app.get('/book',checkAuthenticated,(req,res)=>{
   res.render('book.ejs');
 })
-app.get('/editHobby',(req,res)=>{
+app.get('/editHobby',checkAuthenticated,(req,res)=>{
   res.render('editHobby.ejs');
 })
 
-app.get('/logout',(req,res)=>{
+app.get('/logout',checkAuthenticated,(req,res)=>{
     res.clearCookie('session-token');
     res.redirect('/');
 })
